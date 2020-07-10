@@ -1,5 +1,5 @@
 # GIMUD - Graphical Interface Multi User Dungeon
-# rowenna.npc: Datenbank für die Waffenhändlerin Rowenna
+# rowenna.npc: Datenbank fï¿½r die Waffenhï¿½ndlerin Rowenna
 
 Name = "Rowenna"
 Outfit = (139,132-38-76-38)
@@ -75,6 +75,7 @@ VANISH,!             -> "Good bye. Come back soon."
 %1,1<%1,"throwing","kni"       -> Type=3298, Amount=%1, Price=25*%1,   "Do you want to buy %A throwing knives for %P gold?", Topic=1
 
 "sell","mace"                 -> Type=3286, Amount=1, Price=23,  "Do you want to sell a mace for %P gold?", Topic=2
+"sell","hand","axe"           -> Type=3268, Amount=1, Price=4,   "Do you want to sell a short sword for %P gold?", Topic=2
 "sell","short","sword"        -> Type=3294, Amount=1, Price=8,   "Do you want to sell a short sword for %P gold?", Topic=2
 "sell","dagger"               -> Type=3267, Amount=1, Price=1,   "Do you want to sell a dagger for %P gold?", Topic=2
 "sell","carlin","sword"       -> Type=3283, Amount=1, Price=118, "Do you want to sell a carlin sword for %P gold?", Topic=2
