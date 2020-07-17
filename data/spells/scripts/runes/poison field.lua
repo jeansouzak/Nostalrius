@@ -5,5 +5,6 @@ combat:setParameter(COMBAT_PARAM_DISTANCEEFFECT, CONST_ANI_POISON)
 combat:setParameter(COMBAT_PARAM_CREATEITEM, 2121)
 
 function onCastSpell(creature, variant, isHotkey)
+	if checkSpellCd(creature, 101098, 2) == false then return false end
 	return combat:execute(creature, variant)
 end

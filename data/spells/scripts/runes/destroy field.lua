@@ -4,6 +4,7 @@ local fieldIds = {
 }
 
 function onCastSpell(creature, variant, isHotkey)
+	if checkSpellCd(creature, 101098, 2) == false then return false end
 	local position = Variant.getPosition(variant)
 	local tile = Tile(position)
 	local field = tile and tile:getItemByType(ITEM_TYPE_MAGICFIELD)

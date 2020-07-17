@@ -5,5 +5,6 @@ combat:setParameter(COMBAT_PARAM_MAGICEFFECT, CONST_ME_ENERGYHIT)
 combat:setParameter(COMBAT_PARAM_CREATEITEM, 2122)
 
 function onCastSpell(creature, variant, isHotkey)
+	if checkSpellCd(creature, 101098, 2) == false then return false end
 	return combat:execute(creature, variant)
 end

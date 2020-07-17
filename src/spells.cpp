@@ -724,7 +724,7 @@ void Spell::postCastSpell(Player* player, bool finishedCast /*= true*/, bool pay
 					Condition* condition = Condition::createCondition(CONDITIONID_DEFAULT, CONDITION_EXHAUST, cooldown);
 					player->addCondition(condition);
 				} else {
-					Condition* condition = Condition::createCondition(CONDITIONID_DEFAULT, CONDITION_EXHAUST, 2000);
+					Condition* condition = Condition::createCondition(CONDITIONID_DEFAULT, CONDITION_EXHAUST, 500);
 					player->addCondition(condition);
 				}
 			} else {

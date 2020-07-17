@@ -11,6 +11,7 @@ end
 combat:setCallback(CALLBACK_PARAM_LEVELMAGICVALUE, "onGetFormulaValues")
 
 function onCastSpell(creature, variant)
-	doRemoveCondition(creature, CONDITION_PARALYZE
+	if checkSpellCd(creature, 101099, 1) == false then return false end
+	doRemoveCondition(creature, CONDITION_PARALYZE)
 	return combat:execute(creature, variant)
 end

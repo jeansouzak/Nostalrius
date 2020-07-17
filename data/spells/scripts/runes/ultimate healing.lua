@@ -12,6 +12,13 @@ end
 combat:setCallback(CALLBACK_PARAM_LEVELMAGICVALUE, "onGetFormulaValues")
 
 function onCastSpell(creature, variant, isHotkey)
-	doRemoveCondition(creature, CONDITION_PARALYZE) 	
-	return combat:execute(creature, variant)
+	if checkSpellCd(creature, 101099, 1) == false then return false end
+	local healed = variantToNumber(variant)
+	local pos = variantToPosition(variant)
+	local tile = Tile(pos)
+	print(tile)
+	doRemoveCondition(topCreature, CONDITION_PARALYZE) 	
+	return combat:execute(topCreature, variant)
+	
+	
 end

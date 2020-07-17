@@ -4,6 +4,7 @@ local dead_human = {
 local removalLimit = 10
 
 function onCastSpell(creature, variant)
+	if checkSpellCd(creature, 101098, 2) == false then return false end
 	local position = variant:getPosition()
 	local tile = Tile(position)
 	if tile then

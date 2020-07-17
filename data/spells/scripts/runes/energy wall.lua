@@ -6,5 +6,6 @@ combat:setParameter(COMBAT_PARAM_CREATEITEM, 2122)
 combat:setArea(createCombatArea(AREA_WALLFIELD, AREADIAGONAL_WALLFIELD))
 
 function onCastSpell(creature, variant, isHotkey)
+	if checkSpellCd(creature, 101098, 2) == false then return false end
 	return combat:execute(creature, variant)
 end

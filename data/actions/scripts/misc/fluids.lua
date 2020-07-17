@@ -20,6 +20,7 @@ local messages = {
 }
 
 function onUse(player, item, fromPosition, target, toPosition)
+	
 	local targetItemType = ItemType(target:getId())
 	if targetItemType and targetItemType:isFluidContainer() then
 		if target:getFluidType() == 0 and item:getFluidType() ~= 0 then

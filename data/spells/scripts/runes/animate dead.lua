@@ -3,6 +3,7 @@ local humanBodies = {
 }
 
 function onCastSpell(creature, variant)
+	if checkSpellCd(creature, 101099, 1) == false then return false end
 	local position = Variant.getPosition(variant)
 	local tile = Tile(position)
 	if tile then

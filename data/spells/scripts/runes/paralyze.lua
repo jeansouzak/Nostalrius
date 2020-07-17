@@ -7,6 +7,7 @@ condition:setSpeedDelta(-101)
 combat:setCondition(condition)
 
 function onCastSpell(creature, variant, isHotkey)
+	if checkSpellCd(creature, 101098, 2) == false then return false end
 	if not combat:execute(creature, variant) then
 		return false
 	end
